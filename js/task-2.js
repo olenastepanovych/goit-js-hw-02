@@ -1,16 +1,13 @@
 'use strict';
 
 function formatMessage(message, maxLength) {
-    // Перевірка довжини рядка
     if (message.length <= maxLength) {
         return message;
     } else {
-        // Обрізання рядка до maxLength і додавання "..."
         return message.slice(0, maxLength) + "...";
     }
 }
 
-// Приклад використання функції
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."
 console.log(formatMessage("Curabitur ligula sapien", 23)); // "Curabitur ligula sapien"
 console.log(formatMessage("Vestibulum facilisis purus nec", 20)); // "Vestibulum facilisis..."

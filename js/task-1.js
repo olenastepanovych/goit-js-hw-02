@@ -1,10 +1,8 @@
 'use strict';
 
 function makeTransaction(quantity, pricePerDroid, customerCredits) {
-    // Розрахунок загальної вартості замовлення
     const totalPrice = quantity * pricePerDroid;
 
-    // Перевірка, чи вистачає коштів у клієнта
     if (totalPrice > customerCredits) {
         return "Insufficient funds!";
     } else {
@@ -12,7 +10,6 @@ function makeTransaction(quantity, pricePerDroid, customerCredits) {
     }
 }
 
-// Приклад використання функції
 console.log(makeTransaction(5, 3000, 23000)); // "You ordered 5 droids worth 15000 credits!"
 console.log(makeTransaction(3, 1000, 15000)); // "You ordered 3 droids worth 3000 credits!"
 console.log(makeTransaction(10, 5000, 8000)); // "Insufficient funds!"
